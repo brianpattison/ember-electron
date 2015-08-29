@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "Ember CLI + Electron + Bourbon + Neat",
   "author": {
-    "name" : "Brian Pattison",
-    "email" : "brian@brianpattison.com"
+    "name": "Brian Pattison",
+    "email": "brian@brianpattison.com"
   },
   "main": "main.js",
   "private": true,
@@ -13,7 +13,7 @@
     "test": "tests"
   },
   "scripts": {
-    "build": "ember build",
+    "dist": "source .env && ember build && electron-packager . $APP_NAME --all --app-version=`npm view electron version` --asar=true --overwrite --prune --version=`npm view electron-prebuilt version` --ignore=app --ignore=bower_components --ignore=config --ignore=node_modules --ignore=public --ignore=tests --ignore=tmp --ignore=vendor --ignore=.bowerrc --ignore=.editorconfig --ignore=.ember-cli --ignore=.env --ignore=.gitignore --ignore=.jshintrc --ignore=.travis.yml --ignore=.watchmanconfig --ignore=bower.json --ignore=development.html --ignore=ember-cli-build.js --ignore=package.json --ignore=Procfile --ignore=README.md --ignore=screenshot.png --ignore=testem.json",
     "start": "nf start",
     "test": "ember test"
   },
@@ -24,6 +24,7 @@
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.1.2",
+    "electron-packager": "^5.0.2",
     "electron-prebuilt": "^0.31.0",
     "ember-cli": "1.13.8",
     "ember-cli-app-version": "0.5.0",
