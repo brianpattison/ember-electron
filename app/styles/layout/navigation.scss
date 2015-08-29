@@ -1,0 +1,110 @@
+$navigation-background-color:               color($grey, 800);
+$navigation-base-font-size:                 13px;
+$navigation-link-background-color-active:   $primary-color;
+$navigation-link-color:                     rgba($white, 0.7);
+$navigation-link-color-active:              $white;
+$navigation-section-title-background-color: lighten($navigation-background-color, 5%);
+$navigation-section-title-color:            rgba($navigation-link-color, 0.7);
+$navigation-width:                          170px;
+$toolbar-background-color:                  $navigation-section-title-background-color;
+
+nav {
+  background-color: $navigation-background-color;
+  font-size: $navigation-base-font-size;
+  max-width: $navigation-width;
+  min-width: $navigation-width;
+  position: relative;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin: 0 0 -1px;
+    padding: 0;
+  }
+
+  .title {
+    background-color: $navigation-section-title-background-color;
+    color: $navigation-section-title-color;
+    display: block;
+    font-size: 0.8em;
+    letter-spacing: 0.5px;
+    padding: ($navigation-base-font-size * 0.55) $navigation-base-font-size;
+    text-transform: uppercase;
+  }
+
+  section a {
+    border-bottom: 1px solid $navigation-background-color;
+    border-top: 1px solid $navigation-background-color;
+    color: $navigation-link-color;
+    cursor: default;
+    display: block;
+    font-size: $navigation-base-font-size;
+    padding: ($navigation-base-font-size * 0.55) $navigation-base-font-size;
+    text-decoration: none;
+    vertical-align: bottom;
+
+    i.fa {
+      color: $navigation-link-color;
+      display: inline-block;
+      font-size: 0.89em;
+      position: relative;
+      text-align: center;
+      top: 0.04em;
+      vertical-align: top;
+      width: 1.5em;
+    }
+
+    &.active {
+      background-color: $navigation-link-background-color-active;
+      color: $navigation-link-color-active;
+
+      i.fa {
+        color: $navigation-link-color-active;
+      }
+    }
+
+    &:first-of-type {
+      padding-top: ($navigation-base-font-size * 0.65);
+    }
+
+    &:last-of-type {
+      padding-bottom: ($navigation-base-font-size * 0.65);
+    }
+  }
+}
+
+.navigation-toolbar {
+  @include clearfix;
+  background-color: $toolbar-background-color;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+
+  a {
+    border: 0;
+    border-right: 1px solid $navigation-background-color;
+    cursor: default;
+    display: block;
+    float: left;
+    padding: 0.4em 0.8em 0.51em;
+    text-align: center;
+
+    i.fa {
+      color: $navigation-link-color;
+      font-size: 0.89em;
+    }
+
+    &:hover {
+      background-color: lighten($toolbar-background-color, 2%);
+    }
+
+    &:active {
+      background-color: darken($toolbar-background-color, 2%);
+    }
+  }
+}

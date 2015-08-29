@@ -1,0 +1,37 @@
+$main-background-color: #eee;
+
+html,
+body {
+  background: none;
+  cursor: default;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  -webkit-font-smoothing: subpixel-antialiased;
+  height: 100%;
+  overflow: hidden;
+  text-rendering: optimizelegibility;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  width: 100%;
+
+  img {
+    pointer-events: none;
+  }
+}
+
+.application {
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+nav {
+  flex: 1;
+}
+
+main {
+  background-color: $main-background-color;
+  flex: 3;
+}

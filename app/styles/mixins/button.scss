@@ -1,0 +1,33 @@
+@mixin button($background-color: #f4f4f4, $text-color: #444, $active-background-color: $primary-color, $active-text-color: #fff) {
+  @include linear-gradient(top, $background-color, darken($background-color, 8%));
+  border: 0;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.14902) 0 0 0 1px inset;
+  color: $text-color;
+  cursor: default;
+  display: inline-block;
+  font-size: 11px;
+  height: 27px;
+  line-height: 26px;
+  outline: none;
+  padding: 1px 12px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  i {
+    font-size: 13px;
+    line-height: 11px;
+    margin-right: 2px;
+  }
+
+  &:hover {
+    @include linear-gradient(top, lighten($background-color, 5%), darken($background-color, 3.5%));
+  }
+
+  &:active {
+    @include linear-gradient(top, lighten($active-background-color, 3%), darken($active-background-color, 5%));
+    color: $active-text-color;
+  }
+}
