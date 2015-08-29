@@ -1,8 +1,6 @@
-$main-background-color: #eee;
-
 html,
 body {
-  background: none;
+  background-color: $base-background-color;
   cursor: default;
   font-family: $base-font-family;
   font-size: $base-font-size;
@@ -32,6 +30,5 @@ nav {
 }
 
 main {
-  background-color: $main-background-color;
   flex: 3;
 }
