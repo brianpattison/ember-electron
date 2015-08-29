@@ -1,6 +1,8 @@
 # Ember + Electron + Bourbon + Neat
 
-This project uses Ember CLI and Electron for creating desktop applications.
+Experimenting with Ember CLI and Electron for creating desktop applications.
+
+![Screenshot](screenshot.png)
 
 ## Prerequisites
 
