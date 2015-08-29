@@ -28,9 +28,7 @@ app.on('ready', function() {
   });
 
   if (process.env.ELECTRON_ENV === 'development') {
-    setTimeout(function() {
-      mainWindow.loadUrl('http://localhost:5000/');
-    }, 4000);
+    mainWindow.loadUrl('http://localhost:5000/');
     // mainWindow.openDevTools();
   } else {
     mainWindow.loadUrl('file://' + __dirname + '/dist/index.html');
