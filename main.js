@@ -21,11 +21,11 @@ app.on('window-all-closed', function() {
 app.on('ready', function() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    'height':       600,
-    'min-height':   350,
-    'min-width':    500,
-    'title':        process.env.APP_NAME,
-    'width':        800
+    'height':     600,
+    'min-height': 350,
+    'min-width':  500,
+    'title':      process.env.APP_NAME,
+    'width':      800
   });
 
   if (process.env.ELECTRON_ENV === 'development') {
