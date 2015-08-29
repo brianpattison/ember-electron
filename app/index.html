@@ -25,8 +25,10 @@
       window.require = undefined;
       window.module = undefined;
 
-      // Disable drag and zoom events
+      // Disable drag, drop, and zoom events
       window.ondragstart = function() { return false; }
+      document.addEventListener('drop',       function(e) { e.preventDefault(); e.stopPropagation(); });
+      document.addEventListener('dragover',   function(e) { e.preventDefault(); e.stopPropagation(); });
       document.addEventListener('mousewheel', function(e) { if (e.deltaY % 1 !== 0) { e.preventDefault(); } });
     </script>
     <script src="assets/vendor.js"></script>

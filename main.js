@@ -11,11 +11,6 @@ require('crash-reporter').start();
 // be closed automatically when the JavaScript object is GCed.
 var mainWindow = null;
 
-// Quit when all windows are closed.
-app.on('window-all-closed', function() {
-  app.quit();
-});
-
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 app.on('ready', function() {
@@ -42,4 +37,9 @@ app.on('ready', function() {
     // when you should delete the corresponding element.
     mainWindow = null;
   });
+});
+
+// Quit when all windows are closed.
+app.on('window-all-closed', function() {
+  app.quit();
 });
