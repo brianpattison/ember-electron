@@ -46,3 +46,5 @@ TODO: Add build tools for building the Electron app and the Ember app within.
 * [ember.js](http://emberjs.com/)
 * [ember-cli](http://www.ember-cli.com/)
 * [ember inspector](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
+* [bourbon](http://bourbon.io)
+* [neat](http://neat.bourbon.io)
