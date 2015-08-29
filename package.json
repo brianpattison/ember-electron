@@ -1,8 +1,11 @@
 {
   "name": "electron",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Ember CLI + Electron + Bourbon + Neat",
-  "author": "",
+  "author": {
+    "name" : "Brian Pattison",
+    "email" : "brian@brianpattison.com"
+  },
   "main": "main.js",
   "private": true,
   "directories": {
@@ -14,7 +17,7 @@
     "start": "nf start",
     "test": "ember test"
   },
-  "repository": "",
+  "repository": "https://github.com/brianpattison/ember-electron",
   "engines": {
     "node": ">= 0.10.0"
   },

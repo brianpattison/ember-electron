@@ -10,20 +10,37 @@
       <i class="fa fa-github"></i>
       View on GitHub
     </button>
+
+    <button {{action "getVersion"}}>
+      <i class="fa fa-info-circle"></i>
+      App Information
+    </button>
+
+    <button {{action "showInFinder"}}>
+      <i class="fa fa-folder-open-o"></i>
+      Show in Finder
+    </button>
   </p>
 
   <p>
     <button {{action "openUrl" "http://electron.atom.io/"}}>
       Electron
     </button>
+
     <button {{action "openUrl" "http://emberjs.com/"}}>
       Ember
     </button>
+
     <button {{action "openUrl" "http://bourbon.io/"}}>
       Bourbon
     </button>
+
     <button {{action "openUrl" "http://neat.bourbon.io/"}}>
       Neat
+    </button>
+
+    <button {{action "openUrl" "https://fortawesome.github.io/Font-Awesome/"}}>
+      Font Awesome
     </button>
   </p>
 </div>
