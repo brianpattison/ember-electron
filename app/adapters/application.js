@@ -5,7 +5,7 @@ export default IndexedDBAdapter.extend({
    * Name of your IndexedDB
    * @type {string}
    */
-  dbName: 'com.company-name.app-name',
+  dbName: process.env.APP_BUNDLE_ID,
 
   /**
    * Version of your IndexedDB.
@@ -13,7 +13,7 @@ export default IndexedDBAdapter.extend({
    * of this variable should be higher than the version of your existing IDB.
    * @type {number}
    */
-  version: 1,
+  version: process.env.APP_VERSION,
 
   /**
    * Array containing the name of your models.

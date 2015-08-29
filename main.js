@@ -4,6 +4,10 @@
 var app = require('app');  // Module to control application life.
 var BrowserWindow = require('browser-window');  // Module to create native browser window.
 
+// Set app name and app version from environment variables
+app.setName(process.env.APP_NAME);
+app.setVersion(process.env.APP_VERSION);
+
 // Report crashes to our server.
 require('crash-reporter').start();
 
