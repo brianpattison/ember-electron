@@ -23,8 +23,15 @@ app.on('ready', function() {
     'width':      800
   });
 
+  // Wait for the page to load before showing the window
+  // to avoid the flashing white background color.
+  mainWindow.hide();
+  mainWindow.webContents.on('did-finish-load', function() {
+    mainWindow.show();
+  });
+
   if (process.env.ELECTRON_ENV === 'development') {
-    mainWindow.loadUrl('http://localhost:5000/');
+    mainWindow.loadUrl('file://' + __dirname + '/development.html');
     // mainWindow.openDevTools();
   } else {
     mainWindow.loadUrl('file://' + __dirname + '/dist/index.html');
