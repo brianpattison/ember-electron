@@ -25,7 +25,7 @@ You will need the following things properly installed on your computer.
 
 * `npm start`
 
-You may need to reload the page in the app if the Ember server doesn't start up fast enough.
+You may need to reload the page in the Electron app if the Ember server doesn't start up fast enough.
 
 ### Code Generators
 
