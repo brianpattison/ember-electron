@@ -1,9 +1,11 @@
 {
   "predef": [
     "document",
+    "process",
+    "require",
+    "requireNode",
     "window",
-    "-Promise",
-    "requireNode"
+    "-Promise"
   ],
   "browser": true,
   "boss": true,

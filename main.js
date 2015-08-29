@@ -1,3 +1,4 @@
+/* global __dirname */
 'use strict';
 
 var app = require('app');  // Module to control application life.
