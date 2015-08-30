@@ -34,8 +34,6 @@ npm install && bower install
 npm start
 ```
 
-You may need to reload the page in the Electron app if the Ember server doesn't start up fast enough.
-
 ### Code Generators
 
 Make use of the many generators for code, try `ember help generate` for more details
@@ -45,8 +43,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 ```bash
 npm run dist
 ```
-
-Apps for each platform and architecture will be built and saved to the `/dist` directory.
 
 ## Further Reading / Useful Links
 
