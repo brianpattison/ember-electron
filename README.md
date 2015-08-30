@@ -2,7 +2,8 @@
 
 Experimenting with Ember CLI and Electron for creating desktop applications.
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot-osx.png)
+![Screenshot](screenshot-windows.png)
 
 ## Prerequisites
 
