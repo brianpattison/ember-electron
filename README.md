@@ -1,8 +1,13 @@
-# Ember + Electron + Bourbon + Neat
+# Ember + Electron
 
-Experimenting with Ember CLI and Electron for creating desktop applications.
+An experiment with [Ember CLI](http://www.ember-cli.com/) and [Electron](http://electron.atom.io).
+
+## OS X
 
 ![Screenshot](screenshot-osx.png)
+
+## Windows
+
 ![Screenshot](screenshot-windows.png)
 
 ## Prerequisites
@@ -17,14 +22,17 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone https://github.com/brianpattison/ember-electron.git`
-* change into the new directory
-* `npm install`
-* `bower install`
+```bash
+git clone https://github.com/brianpattison/ember-electron.git
+cd ember-electron
+npm install && bower install
+```
 
 ## Running / Development
 
-* `npm start`
+```bash
+npm start
+```
 
 You may need to reload the page in the Electron app if the Ember server doesn't start up fast enough.
 
@@ -34,7 +42,9 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ## Distribution
 
-* `npm run dist`
+```bash
+npm run dist
+```
 
 Apps for each platform and architecture will be built and saved to the `/dist` directory.
 
