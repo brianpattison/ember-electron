@@ -13,8 +13,8 @@
     "test": "tests"
   },
   "scripts": {
-    "dist": "source .env && ember build && electron-packager . $APP_NAME --all --app-version=$APP_VERSION --asar=true --overwrite --prune --version=`npm view electron-prebuilt version` --ignore=app --ignore=bower_components --ignore=config --ignore=node_modules --ignore=public --ignore=tests --ignore=tmp --ignore=vendor --ignore=.bowerrc --ignore=.editorconfig --ignore=.ember-cli --ignore=.env --ignore=.gitignore --ignore=.jshintrc --ignore=.travis.yml --ignore=.watchmanconfig --ignore=bower.json --ignore=development.html --ignore=ember-cli-build.js --ignore=package.json --ignore=Procfile --ignore=README.md --ignore=screenshot.png --ignore=testem.json",
-    "start": "nf start",
+    "dist": "mkdir -p ./tmp && rm -rf ./tmp && mkdir -p ./dist && rm -rf ./dist && mkdir ./dist && source .env && ELECTRON_ENV=production && ember build --output-path=./tmp/dist/ && cp main.js ./tmp/dist/main.js && cp package.json ./tmp/dist/package.json && electron-packager ./tmp/dist/ \"$APP_NAME\" --all --app-version=\"$APP_VERSION\" --asar=true --out=./dist --overwrite --version=`npm view electron-prebuilt version` --ignore=app/ --ignore=bower_components/ --ignore=config/ --ignore=node_modules/ --ignore=public/ --ignore=tests/ --ignore=tmp/ --ignore=vendor/ --ignore=.bowerrc --ignore=.editorconfig --ignore=.ember-cli --ignore=.env --ignore=.gitignore --ignore=.jshintrc --ignore=.travis.yml --ignore=.watchmanconfig --ignore=bower.json --ignore=development.html --ignore=ember-cli-build.js --ignore=Procfile --ignore=README.md --ignore=screenshot.png --ignore=testem.json",
+    "start": "mkdir -p ./tmp && rm -rf ./tmp && nf start",
     "test": "ember test"
   },
   "repository": "https://github.com/brianpattison/ember-electron",

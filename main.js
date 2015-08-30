@@ -5,8 +5,9 @@ var app = require('app');  // Module to control application life.
 var BrowserWindow = require('browser-window');  // Module to create native browser window.
 
 // Set app name and app version from environment variables
-app.setName(process.env.APP_NAME);
-app.setVersion(process.env.APP_VERSION);
+// FIXME: This doesn't work when compiling for distribution
+// app.setName(process.env.APP_NAME);
+// app.setVersion(process.env.APP_VERSION);
 
 // Report crashes to our server.
 require('crash-reporter').start();
@@ -38,7 +39,7 @@ app.on('ready', function() {
     mainWindow.loadUrl('file://' + __dirname + '/development.html');
     // mainWindow.openDevTools();
   } else {
-    mainWindow.loadUrl('file://' + __dirname + '/dist/index.html');
+    mainWindow.loadUrl('file://' + __dirname + '/index.html');
   }
 
   // Emitted when the window is closed.
