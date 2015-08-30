@@ -36,9 +36,11 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember test`
 * `ember test --server`
 
-### Building
+## Distribution
 
-TODO: Add build tools for building the Electron app and the Ember app within.
+* `npm run dist`
+
+Apps for each platform and architecture will be built and saved to the `/dist` directory.
 
 ## Further Reading / Useful Links
 
