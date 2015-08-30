@@ -92,6 +92,7 @@ nav {
     display: block;
     float: left;
     padding: 0.4em 0.8em 0.51em;
+    position: relative;
     text-align: center;
 
     i.fa {
@@ -105,6 +106,13 @@ nav {
 
     &:active {
       background-color: darken($toolbar-background-color, 2%);
+    }
+
+    i.fa.fa-caret-down {
+      bottom: 6px;
+      font-size: 0.7em;
+      position: absolute;
+      right: 4px;
     }
   }
 }
