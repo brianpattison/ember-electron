@@ -7,20 +7,20 @@ var menu = new Menu();
 menu.append(new MenuItem({
   label: 'Menu item #1',
   click: function() {
-    console.log('Menu item #1');
+    alert('Menu item #1');
   }
 }));
 menu.append(new MenuItem({
   label: 'Menu item #2',
   click: function() {
-    console.log('Menu item #2');
+    alert('Menu item #2');
   }
 }));
 menu.append(new MenuItem({ type: 'separator' }));
 menu.append(new MenuItem({
   label: 'Menu item #3',
   click: function() {
-    console.log('Menu item #3');
+    alert('Menu item #3');
   }
 }));
 
