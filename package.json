@@ -1,6 +1,6 @@
 {
   "name": "electron",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Ember CLI + Electron + Bourbon + Neat",
   "author": {
     "name": "Brian Pattison",
@@ -13,8 +13,8 @@
     "test": "tests"
   },
   "scripts": {
-    "dist": "mkdir -p ./tmp && rm -rf ./tmp && mkdir -p ./dist && rm -rf ./dist && mkdir ./dist && source .env && ELECTRON_ENV=production && ember build --output-path=./tmp/dist/ && cp main.js ./tmp/dist/main.js && cp package.json ./tmp/dist/package.json && electron-packager ./tmp/dist/ \"$APP_NAME\" --all --app-version=\"$APP_VERSION\" --asar=true --out=./dist --overwrite --version=`npm view electron-prebuilt version` && open ./dist",
-    "start": "mkdir -p ./tmp && rm -rf ./tmp && nf start",
+    "dist": "mkdir -p ./tmp && rm -rf ./tmp && mkdir -p ./dist && rm -rf ./dist && mkdir ./dist && source .env.production && ember build --output-path=./tmp/dist/ && cp main.js ./tmp/dist/main.js && cp package.json ./tmp/dist/package.json && electron-packager ./tmp/dist/ \"$PRODUCT_NAME\" --all --app-bundle-id=\"$APP_BUNDLE_ID\" --app-version=\"$APP_VERSION\" --asar=true --out=./dist --overwrite --version=`npm view electron-prebuilt version` && open ./dist",
+    "start": "mkdir -p ./tmp && rm -rf ./tmp && nf -e .env.development start",
     "test": "ember test"
   },
   "repository": "https://github.com/brianpattison/ember-electron",

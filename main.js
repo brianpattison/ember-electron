@@ -5,9 +5,7 @@ var app = require('app');  // Module to control application life.
 var BrowserWindow = require('browser-window');  // Module to create native browser window.
 
 // Set app name and app version from environment variables
-// FIXME: This doesn't work when compiling for distribution
-// app.setName(process.env.APP_NAME);
-// app.setVersion(process.env.APP_VERSION);
+app.setName('Ember + Electron');
 
 // Report crashes to our server.
 require('crash-reporter').start();
@@ -24,7 +22,7 @@ app.on('ready', function() {
     'height':     600,
     'min-height': 350,
     'min-width':  500,
-    'title':      process.env.APP_NAME,
+    'title':      app.getName(),
     'width':      800
   });
 
