@@ -18,5 +18,8 @@
     "reset-scss": "*",
     "hammerjs": "~2.0.4"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "resolutions": {
+    "ember": "~2.0.1"
+  }
 }
