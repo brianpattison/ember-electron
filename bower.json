@@ -17,7 +17,8 @@
     "neat": "~1.7.2",
     "node-uuid": "~1.4.3",
     "qunit": "~1.18.0",
-    "reset-scss": "*"
+    "reset-scss": "*",
+    "blob-polyfill": "~1.0.20150320"
   },
   "devDependencies": {},
   "resolutions": {
