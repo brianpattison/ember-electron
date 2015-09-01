@@ -19,11 +19,11 @@ var mainWindow = null;
 app.on('ready', function() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    'height':     300,
-    'min-height': 300,
+    'height':     600,
+    'min-height': 400,
     'min-width':  600,
     'title':      app.getName(),
-    'width':      600
+    'width':      800
   });
 
   // Wait for the page to load before showing the window
