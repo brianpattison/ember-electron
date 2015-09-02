@@ -17,13 +17,17 @@
     <script type="text/javascript">
       // Make Ember CLI and Electron to play nice together
       if (window.require === undefined) {
-        window.require = function(moduleName) {
+        function badRequire(moduleName) {
           console.error('Module `' + moduleName + '` must be loaded by the Electron app. Run `npm start` to open the app.');
-        };
+          return { require: badRequire };
+        }
+        window.require = badRequire;
+        window.requireNode = badRequire;
+      } else {
+        window.requireNode = window.require;
+        window.require = undefined;
+        window.module = undefined;
       }
-      window.requireNode = window.require;
-      window.require = undefined;
-      window.module = undefined;
 
       // Disable drag, drop, and zoom events
       window.ondragstart = function() { return false; }
