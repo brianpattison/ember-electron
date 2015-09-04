@@ -1,5 +1,6 @@
 var exec = require('child_process').exec;
 var fs = require('fs');
+var packagejson = require('./package.json');
 var packager = require('electron-packager');
 
 var commands = [];
@@ -26,7 +27,7 @@ commands.push('cp ./package.json ./tmp/dist/package.json');
 
 // Copy the directories for each node module required by the app
 commands.push('mkdir -p ./tmp/dist/node_modules');
-var dependencies = JSON.parse(fs.readFileSync('./package.json', 'utf8'))['dependencies'];
+var dependencies = packagejson['dependencies'];
 if (dependencies === null || dependencies === undefined) {
   dependencies = {};
 }
