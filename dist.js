@@ -38,6 +38,7 @@ Object.keys(dependencies).forEach(function(module) {
 // Build the Ember app
 exec(commands.join(' && '), function() {
   // Build the Electron app
+  var electronVersion = packagejson['devDependencies']['electron-prebuilt'].replace(/[^\d.]/g, '')
   packager({
     all: true,
     asar: true,
@@ -45,7 +46,7 @@ exec(commands.join(' && '), function() {
     name: 'Ember + Electron',
     out: './dist',
     overwrite: true,
-    version: '0.31.2'
+    version: electronVersion
   }, function(error, appPath) {
     console.log('error:', error);
     console.log('appPath:', appPath);
