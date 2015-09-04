@@ -1,8 +1,8 @@
 import StorageObject from 'ember-local-storage/local/object';
 
 export default StorageObject.extend({
-  storageKey: 'bucketeer-settings',
+  storageKey: 'ember-electron-settings',
   initialContent: {
-    hello: 'world2'
+    hello: 'world'
   }
 });

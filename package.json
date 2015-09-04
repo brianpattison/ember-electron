@@ -13,7 +13,7 @@
     "test": "tests"
   },
   "scripts": {
-    "dist": "mkdir -p ./tmp && rm -rf ./tmp && mkdir -p ./dist && rm -rf ./dist && mkdir ./dist && source .env.production && ember build --output-path=./tmp/dist/ && cp main.js ./tmp/dist/main.js && cp package.json ./tmp/dist/package.json && electron-packager ./tmp/dist/ \"$PRODUCT_NAME\" --all --app-bundle-id=\"$APP_BUNDLE_ID\" --app-version=\"$APP_VERSION\" --asar=true --out=./dist --overwrite --version=`npm view electron-prebuilt version` && open ./dist",
+    "dist": "source .env.production && node dist.js && open ./dist",
     "start": "mkdir -p ./tmp && rm -rf ./tmp && nf -e .env.development start",
     "test": "ember test"
   },
