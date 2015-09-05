@@ -1,10 +1,9 @@
 import Ember from 'ember';
-import Settings from 'electron/models/settings';
 var remote = requireNode('remote');
 
-export function initialize() {
+export function initialize(instance) {
   var mainWindow = remote.getCurrentWindow();
-  var settings = Settings.create();
+  var settings = instance.container.lookup('service:settings');
 
   // Check for window frame settings and
   if (Ember.isNone(settings.get('mainWindowBounds'))) {
@@ -40,5 +39,6 @@ export function initialize() {
 
 export default {
   name: 'main-window',
+  after: 'settings',
   initialize: initialize
 };
