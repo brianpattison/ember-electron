@@ -22,13 +22,13 @@ app.on('ready', function() {
     'height':     600,
     'min-height': 400,
     'min-width':  600,
+    'show':       false,
     'title':      app.getName(),
     'width':      800
   });
 
   // Wait for the page to load before showing the window
   // to avoid the flashing white background color.
-  mainWindow.hide();
   mainWindow.webContents.on('did-finish-load', function() {
     mainWindow.show();
   });
