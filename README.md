@@ -38,10 +38,10 @@ npm start
 
 Make use of the many generators for code, try `ember help generate` for more details
 
-## Distribution
+## Build for All Platforms
 
 ```bash
-npm run dist
+npm run build
 ```
 
 ## Further Reading / Useful Links

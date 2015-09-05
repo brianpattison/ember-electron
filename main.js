@@ -37,7 +37,7 @@ app.on('ready', function() {
     mainWindow.loadUrl('file://' + __dirname + '/development.html');
     // mainWindow.openDevTools();
   } else {
-    mainWindow.loadUrl('file://' + __dirname + '/index.html');
+    mainWindow.loadUrl('file://' + __dirname + '/dist/index.html');
   }
 
   // Emitted when the window is closed.

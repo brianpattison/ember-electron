@@ -1,10 +1,16 @@
 {
   "name": "electron",
-  "version": "0.1.1",
   "description": "Ember CLI + Electron + Bourbon + Neat",
   "author": {
     "name": "Brian Pattison",
     "email": "brian@brianpattison.com"
+  },
+  "productName": "Ember + Electron",
+  "appBundleId": "com.brianpattison.ember-electron",
+  "version": "0.1.1",
+  "versionString": {
+    "CompanyName": "Brian Pattison",
+    "LegalCopyright": "Copyright 2015 Brian Pattison"
   },
   "main": "main.js",
   "private": true,
@@ -13,8 +19,8 @@
     "test": "tests"
   },
   "scripts": {
-    "dist": "source .env.production && node dist.js && open ./dist",
-    "start": "mkdir -p ./tmp && rm -rf ./tmp && nf -e .env.development start",
+    "build": "node electron-build.js && open ./build",
+    "start": "mkdir -p ./tmp && rm -rf ./tmp && nf start",
     "test": "ember test"
   },
   "repository": "https://github.com/brianpattison/ember-electron",
