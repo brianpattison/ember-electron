@@ -7,6 +7,6 @@ export function initialize(instance) {
 }
 
 export default {
-  name: 'settings',
+  name: 'ember-electron-settings',
   initialize: initialize
 };

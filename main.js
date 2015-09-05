@@ -19,18 +19,13 @@ var mainWindow = null;
 app.on('ready', function() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    'height':     600,
-    'min-height': 400,
-    'min-width':  600,
-    'show':       false,
-    'title':      app.getName(),
-    'width':      800
-  });
-
-  // Wait for the page to load before showing the window
-  // to avoid the flashing white background color.
-  mainWindow.webContents.on('did-finish-load', function() {
-    mainWindow.show();
+    'accept-first-mouse': false,
+    'height':             600,
+    'min-height':         400,
+    'min-width':          600,
+    'show':               false,
+    'title':              app.getName(),
+    'width':              800
   });
 
   if (process.env.ELECTRON_ENV === 'development') {
